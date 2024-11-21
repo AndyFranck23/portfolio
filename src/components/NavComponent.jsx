@@ -24,7 +24,7 @@ export const NavComponent = () => {
     };
 
     return (
-        <div className="sm:text-md bg-background bg-auto bg-cover bg-contain">
+        <div className="sm:text-md">
             <div className="fixed w-full top-0 left-0 scroll-smooth z-50">
                 <div className="flex justify-between py-2 px-2 items-center text-md sm:text-lg h-[50px] bg-black/10 backdrop-blur-sm blakdrop-opacity-20 shadow-md animate-nav">
                     <a href='#' className='font-bold'>Andy F.</a>
@@ -254,7 +254,7 @@ export const HelloWorld = ({ click }) => {
     }, [])
 
     return (
-        <div className="flex justify-center items-center text-black h-screen w-screen bg-background bg-auto bg-cover bg-contain">
+        <div className="flex justify-center items-center text-black h-screen w-screen">
             <div className="">
                 <div className="relative inline-block p-4 m-4">
                     <div className="absolute top-0 left-0 border-t-8 border-l-8 border-blue-500 w-10 h-8"></div>
