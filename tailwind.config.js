@@ -39,7 +39,7 @@ export default {
         }
       },
       backgroundImage: {
-        'background': "url('./src/assets/background.jpg')",
+        'background': "url('./src/assets/background2.jpg')",
       },
       screens: {
         'xs': '400px',
