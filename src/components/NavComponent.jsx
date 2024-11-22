@@ -7,6 +7,7 @@ import sudoku from "../assets/imgSudoku.jpg"
 import book from "../assets/book.jpg"
 import gateau from "../assets/gateau.jpg"
 import ardesign from "../assets/ardesign.jpg"
+import { useNavigate } from 'react-router-dom'
 
 export const NavComponent = () => {
     useEffect(() => {
@@ -231,10 +232,15 @@ export const Contact = () => {
     )
 }
 
-export const HelloWorld = ({ click }) => {
+export const HelloWorld = () => {
     const [lettres, setLettres] = useState([])
     const [time, setTime] = useState(0)
     const text = "Hello world, Je m'appelle Andy et je suis un développeur fullStack JavaScript"
+    const navigate = useNavigate();
+
+    const Home = () => {
+        navigate("/Home");
+    };
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -264,7 +270,7 @@ export const HelloWorld = ({ click }) => {
                         ))
                     }</div>
                 </div>
-                {time == 77 ? <MyButton click={click} /> : ""}
+                {time == 77 ? <MyButton click={Home} /> : ""}
             </div>
         </div>
     )
