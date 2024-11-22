@@ -8,7 +8,7 @@ function App() {
     <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
       <Routes>
         <Route path="/" element={<HelloWorld />} />
-        <Route path="/Home" element={<NavComponent />} />
+        <Route path="/Home/*" element={<NavComponent />} />
       </Routes>
     </BrowserRouter>
   )
