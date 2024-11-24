@@ -57,7 +57,7 @@ export const NavComponent = () => {
                                 <a href='mailto:ironmanandy23@gmail.com' className='border border-[#0081A7] border-2 py-2 px-3 rounded-[15px] hover:bg-[#0081A7] hover:text-white '><i className='fa fa-envelope text-xl'></i>  Contact</a>
                                 <a href='https://www.linkedin.com/in/andy-franck-rakotoarimanitra-a368092bb/'
                                     className='border border-[#0081A7] border-2 py-2 px-3 rounded-[15px] hover:bg-[#0081A7] hover:text-white'><i className='fa-brands fa-linkedin text-xl'></i> LinkedIn</a>
-                                <a href='/newCV.pdf' download="andyCV.pdf" className='border border-[#0081A7] border-2 py-2 px-3 rounded-[15px] hover:bg-[#0081A7] hover:text-white'><i className=' animate-bounce fa-solid fa-download text-xl'></i> CV</a>
+                                <a href='/CVnew.pdf' download="andyCV.pdf" className='border border-[#0081A7] border-2 py-2 px-3 rounded-[15px] hover:bg-[#0081A7] hover:text-white'><i className=' animate-bounce fa-solid fa-download text-xl'></i> CV</a>
                             </div>
                         </div>
                     </div>
