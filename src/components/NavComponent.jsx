@@ -7,6 +7,7 @@ import sudoku from "../assets/imgSudoku.jpg"
 import book from "../assets/book.jpg"
 import gateau from "../assets/gateau.jpg"
 import ardesign from "../assets/ardesign.jpg"
+import { useNavigate } from 'react-router-dom'
 
 export const NavComponent = () => {
     useEffect(() => {
@@ -57,7 +58,7 @@ export const NavComponent = () => {
                                 <a href='mailto:ironmanandy23@gmail.com' className='border border-[#0081A7] border-2 py-2 px-3 rounded-[15px] hover:bg-[#0081A7] hover:text-white '><i className='fa fa-envelope text-xl'></i>  Contact</a>
                                 <a href='https://www.linkedin.com/in/andy-franck-rakotoarimanitra-a368092bb/'
                                     className='border border-[#0081A7] border-2 py-2 px-3 rounded-[15px] hover:bg-[#0081A7] hover:text-white'><i className='fa-brands fa-linkedin text-xl'></i> LinkedIn</a>
-                                <a href='/CVnew.pdf' download="andyCV.pdf" className='border border-[#0081A7] border-2 py-2 px-3 rounded-[15px] hover:bg-[#0081A7] hover:text-white'><i className=' animate-bounce fa-solid fa-download text-xl'></i> CV</a>
+                                <a href='/CV.pdf' download="andyCV.pdf" className='border border-[#0081A7] border-2 py-2 px-3 rounded-[15px] hover:bg-[#0081A7] hover:text-white'><i className=' animate-bounce fa-solid fa-download text-xl'></i> CV</a>
                             </div>
                         </div>
                     </div>
@@ -231,10 +232,15 @@ export const Contact = () => {
     )
 }
 
-export const HelloWorld = ({ click }) => {
+export const HelloWorld = () => {
     const [lettres, setLettres] = useState([])
     const [time, setTime] = useState(0)
     const text = "Hello world, Je m'appelle Andy et je suis un développeur fullStack JavaScript"
+    const navigate = useNavigate();
+
+    const Home = () => {
+        navigate("/Home");
+    };
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -264,7 +270,7 @@ export const HelloWorld = ({ click }) => {
                         ))
                     }</div>
                 </div>
-                {time == 77 ? <MyButton click={click} /> : ""}
+                {time == 77 ? <MyButton click={Home} /> : ""}
             </div>
         </div>
     )
