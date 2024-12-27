@@ -14,7 +14,7 @@ const sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>
         .map((route) => {
             return `
         <url>
-          <loc>https://votre-domaine.com${route}</loc>
+          <loc>https://andy23portfolio.netlify.app${route}</loc>
           <priority>0.8</priority>
         </url>
       `;
