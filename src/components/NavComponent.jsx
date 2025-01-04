@@ -29,7 +29,7 @@ export const NavComponent = () => {
             <Helmet>
                 <title>Home | Mon site</title>
                 <meta name='description' content='Découvrez mon portfolio' />
-                <link rel="canonical" href="https://andy23portfolio.netlify.app/" />
+                <link rel="canonical" href="https://andy23portfolio.netlify.app/Home" />
             </Helmet>
             <div className="sm:text-md bg-background bg-auto bg-cover bg-contain">
                 <div className="fixed w-full top-0 left-0 scroll-smooth z-50">
