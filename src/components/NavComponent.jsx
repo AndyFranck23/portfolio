@@ -8,6 +8,7 @@ import book from "../assets/book.jpg"
 import gateau from "../assets/gateau.jpg"
 import ardesign from "../assets/ardesign.jpg"
 import { useNavigate } from 'react-router-dom'
+import { Helmet } from 'react-helmet'
 
 export const NavComponent = () => {
     useEffect(() => {
@@ -24,74 +25,81 @@ export const NavComponent = () => {
     };
 
     return (
-        <div className="sm:text-md bg-background bg-auto bg-cover bg-contain">
-            <div className="fixed w-full top-0 left-0 scroll-smooth z-50">
-                <div className="flex justify-between py-2 px-2 items-center text-md sm:text-lg h-[50px] bg-black/10 backdrop-blur-sm blakdrop-opacity-20 shadow-md animate-nav">
-                    <a href='#' className='font-bold'>Andy F.</a>
-                    <div className="flex justify-between items-center w-[230px]">
-                        <button onClick={() => scrollToSection("projet")} >
-                            Projet
-                        </button>
-                        <button onClick={() => scrollToSection("contact")} >
-                            Contact
-                        </button>
-                        <a href='https://github.com/AndyFranck23' className='bg-[#0081A7] px-3 py-1 rounded-[50px] text-white shadow-xl hover:bg-white hover:border-2 hover:border-[#0081A7] hover:text-[#0081A7] '>
-                            <i className='fa-brands fa-github text-xl'></i> Github
-                        </a>
+        <>
+            <Helmet>
+                <title>Home | Mon site</title>
+                <meta name='description' content='Découvrez mon portfolio' />
+                <link rel="canonical" href="https://andy23portfolio.netlify.app/Home" />
+            </Helmet>
+            <div className="sm:text-md bg-background bg-auto bg-cover bg-contain">
+                <div className="fixed w-full top-0 left-0 scroll-smooth z-50">
+                    <div className="flex justify-between py-2 px-2 items-center text-md sm:text-lg h-[50px] bg-black/10 backdrop-blur-sm blakdrop-opacity-20 shadow-md animate-nav">
+                        <h1 href='#' className='font-bold'>Andy F.</h1>
+                        <div className="flex justify-between items-center w-[230px]">
+                            <button onClick={() => scrollToSection("projet")} >
+                                Projet
+                            </button>
+                            <button onClick={() => scrollToSection("contact")} >
+                                Contact
+                            </button>
+                            <a href='https://github.com/AndyFranck23' className='bg-[#0081A7] px-3 py-1 rounded-[50px] text-white shadow-xl hover:bg-white hover:border-2 hover:border-[#0081A7] hover:text-[#0081A7] '>
+                                <i className='fa-brands fa-github text-xl'></i> Github
+                            </a>
+                        </div>
                     </div>
+                </div>
+                <div className="sm:border-b-2">
+                    <div className="sm:flex block justify-between items-center p-5 pt-10">
+                        <div className="border-b-4 mb-4 animate-imageProfil">
+                            <img src={image} className='right sm:w-[600px] h-[300px]' />
+                        </div>
+                        <div className='text-black animate-textProfil'>
+                            Hello world, Je m'appelle <br /><span className='text-2xl font-bold text-[#0081A7] '>Andy Franck</span><br /><p className='text-xl font-[600]'>Développeur FullStack JavaScript</p> <br /> Le develeppement informatique
+                            est pour moi l'une de mes patient et je suis pret à realiser tout projet et améliorer mes compétences.
+                        </div><br />
+                    </div>
+                    <div className="px-2 animate-body">
+                        <div id='projet' className="sm:flex justify-center items-center">
+                            <div className="sm:w-[450px]">
+                                <div className="flex justify-around items-center bg-white py-4 px-1 rounded-2xl">
+                                    <a href='mailto:ironmanandy23@gmail.com' className='border border-[#0081A7] border-2 py-2 px-3 rounded-[15px] hover:bg-[#0081A7] hover:text-white '><i className='fa fa-envelope text-xl'></i>  Contact</a>
+                                    <a href='https://www.linkedin.com/in/andy-franck-rakotoarimanitra-a368092bb/'
+                                        className='border border-[#0081A7] border-2 py-2 px-3 rounded-[15px] hover:bg-[#0081A7] hover:text-white'><i className='fa-brands fa-linkedin text-xl'></i> LinkedIn</a>
+                                    <a href='/CV.pdf' download="andyCV.pdf" className='border border-[#0081A7] border-2 py-2 px-3 rounded-[15px] hover:bg-[#0081A7] hover:text-white'><i className=' animate-bounce fa-solid fa-download text-xl'></i> CV</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="mt-[50px] font-[600]">
+                            <div className="flex justify-center">
+                                <div className="text-black">
+                                    <p className='text-[40px] border-b-4 border-[#0081A7] flex justify-center mb-20'>Projets</p>
+                                </div>
+                            </div>
+                            <ListProjet />
+                        </div>
+                        <div className="mt-[50px] font-[600]">
+                            <div id='competences' className="flex justify-center">
+                                <div className="text-white-100">
+                                    <p className='text-[40px] border-b-4 border-[#0081A7] flex justify-center'>Compétences</p>
+                                    <p className='text-lg  mb-20'>Mes principales technologies</p>
+                                </div>
+                            </div>
+                            <Competence />
+                        </div>
+                        <div id='contact' className="mt-[50px] font-[600] ">
+                            <div id='contact' className="flex justify-center">
+                                <div className="text-black">
+                                    <p className='text-[40px] border-b-4 border-[#0081A7] flex justify-center'>Contact</p>
+                                    <p className='text-lg mb-20 text-center'>N'hésitez pas à me contacter pour <br /> toute demande ou quesion</p>
+                                </div>
+                            </div>
+                            <Contact />
+                        </div>
+                    </div>
+                    <Footer />
                 </div>
             </div>
-            <div className="sm:border-b-2">
-                <div className="sm:flex block justify-between items-center p-5 pt-10">
-                    <div className="border-b-4 mb-4 animate-imageProfil">
-                        <img src={image} className='right sm:w-[600px] h-[300px]' />
-                    </div>
-                    <div className='text-black animate-textProfil'>
-                        Hello world, Je m'appelle <br /><span className='text-2xl font-bold text-[#0081A7] '>Andy Franck</span><br /><p className='text-xl font-[600]'>Développeur FullStack JavaScript</p> <br /> Le develeppement informatique
-                        est pour moi l'une de mes patient et je suis pret à realiser tout projet et améliorer mes compétences.
-                    </div><br />
-                </div>
-                <div className="px-2 animate-body">
-                    <div id='projet' className="sm:flex justify-center items-center">
-                        <div className="sm:w-[450px]">
-                            <div className="flex justify-around items-center bg-white py-4 px-1 rounded-2xl">
-                                <a href='mailto:ironmanandy23@gmail.com' className='border border-[#0081A7] border-2 py-2 px-3 rounded-[15px] hover:bg-[#0081A7] hover:text-white '><i className='fa fa-envelope text-xl'></i>  Contact</a>
-                                <a href='https://www.linkedin.com/in/andy-franck-rakotoarimanitra-a368092bb/'
-                                    className='border border-[#0081A7] border-2 py-2 px-3 rounded-[15px] hover:bg-[#0081A7] hover:text-white'><i className='fa-brands fa-linkedin text-xl'></i> LinkedIn</a>
-                                <a href='/CV.pdf' download="andyCV.pdf" className='border border-[#0081A7] border-2 py-2 px-3 rounded-[15px] hover:bg-[#0081A7] hover:text-white'><i className=' animate-bounce fa-solid fa-download text-xl'></i> CV</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="mt-[50px] font-[600]">
-                        <div className="flex justify-center">
-                            <div className="text-black">
-                                <p className='text-[40px] border-b-4 border-[#0081A7] flex justify-center mb-20'>Projets</p>
-                            </div>
-                        </div>
-                        <ListProjet />
-                    </div>
-                    <div className="mt-[50px] font-[600]">
-                        <div id='competences' className="flex justify-center">
-                            <div className="text-white-100">
-                                <p className='text-[40px] border-b-4 border-[#0081A7] flex justify-center'>Compétences</p>
-                                <p className='text-lg  mb-20'>Mes principales technologies</p>
-                            </div>
-                        </div>
-                        <Competence />
-                    </div>
-                    <div id='contact' className="mt-[50px] font-[600] ">
-                        <div id='contact' className="flex justify-center">
-                            <div className="text-black">
-                                <p className='text-[40px] border-b-4 border-[#0081A7] flex justify-center'>Contact</p>
-                                <p className='text-lg mb-20 text-center'>N'hésitez pas à me contacter pour <br /> toute demande ou quesion</p>
-                            </div>
-                        </div>
-                        <Contact />
-                    </div>
-                </div>
-                <Footer />
-            </div>
-        </div>
+        </>
     )
 }
 
