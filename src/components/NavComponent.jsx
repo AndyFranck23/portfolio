@@ -267,20 +267,27 @@ export const HelloWorld = () => {
     }, [])
 
     return (
-        <div className="flex justify-center items-center text-black h-screen w-screen bg-background bg-auto bg-cover bg-contain">
-            <div className="">
-                <div className="relative inline-block p-4 m-4">
-                    <div className="absolute top-0 left-0 border-t-8 border-l-8 border-blue-500 w-10 h-8"></div>
-                    <div className="absolute border-b-8 border-r-8 border-blue-500 w-10 h-8 right-0 bottom-0 w-10 h-8"></div>
-                    <div className='relative text-black font-bold '>{
-                        lettres.map((lettre, i) => (
-                            <span key={i}>{lettre}</span>
-                        ))
-                    }</div>
+        <>
+            <Helmet>
+                <title>Accueil | Mon site</title>
+                <meta name='description' content='Découvrez mon portfolio Andy' />
+                <link rel="canonical" href="https://andy23portfolio.netlify.app/" />
+            </Helmet>
+            <div className="flex justify-center items-center text-black h-screen w-screen bg-background bg-auto bg-cover bg-contain">
+                <div className="">
+                    <div className="relative inline-block p-4 m-4">
+                        <div className="absolute top-0 left-0 border-t-8 border-l-8 border-blue-500 w-10 h-8"></div>
+                        <div className="absolute border-b-8 border-r-8 border-blue-500 w-10 h-8 right-0 bottom-0 w-10 h-8"></div>
+                        <div className='relative text-black font-bold '>{
+                            lettres.map((lettre, i) => (
+                                <span key={i}>{lettre}</span>
+                            ))
+                        }</div>
+                    </div>
+                    {time == 77 ? <MyButton click={Home} /> : ""}
                 </div>
-                {time == 77 ? <MyButton click={Home} /> : ""}
             </div>
-        </div>
+        </>
     )
 }
 
