@@ -53,10 +53,10 @@ export const NavComponent = () => {
                         <div className="border-b-4 mb-4 animate-imageProfil">
                             <img src={image} className='right sm:w-[600px] h-[300px]' />
                         </div>
-                        <div className='text-black animate-textProfil'>
+                        <h1 className='text-black animate-textProfil'>
                             Hello world, Je m'appelle <br /><span className='text-2xl font-bold text-[#0081A7] '>Andy Franck</span><br /><p className='text-xl font-[600]'>Développeur FullStack JavaScript</p> <br /> Le develeppement informatique
                             est pour moi l'une de mes patient et je suis pret à realiser tout projet et améliorer mes compétences.
-                        </div><br />
+                        </h1><br />
                     </div>
                     <div className="px-2 animate-body">
                         <div id='projet' className="sm:flex justify-center items-center">
