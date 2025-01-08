@@ -27,8 +27,8 @@ export const NavComponent = () => {
     return (
         <>
             <Helmet>
-                <title>Home | Mon site</title>
-                <meta name='description' content='Découvrez mon portfolio' />
+                <title>Andy23 Accueil</title>
+                <meta name='description' content='Découvrez mon portfolio avec mes projet et mes compétences' />
                 <link rel="canonical" href="https://andy23portfolio.netlify.app/Home" />
             </Helmet>
             <div className="sm:text-md bg-background bg-auto bg-cover bg-contain">
@@ -269,7 +269,7 @@ export const HelloWorld = () => {
     return (
         <>
             <Helmet>
-                <title>Accueil | Mon site</title>
+                <title>Andy Franck Bienvenu</title>
                 <meta name='description' content='Découvrez mon portfolio Andy' />
                 <link rel="canonical" href="https://andy23portfolio.netlify.app/" />
             </Helmet>
