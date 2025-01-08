@@ -27,7 +27,7 @@ export const NavComponent = () => {
     return (
         <>
             <Helmet>
-                <title>Andy23 Accueil</title>
+                <title>Andy Franck PortFolio</title>
                 <meta name='description' content='Découvrez mon portfolio avec mes projet et mes compétences' />
                 <link rel="canonical" href="https://andy23portfolio.netlify.app/Home" />
             </Helmet>
