@@ -269,7 +269,7 @@ export const HelloWorld = () => {
     return (
         <>
             <Helmet>
-                <title>Andy Franck Bienvenu</title>
+                <title>Andy PortFolio</title>
                 <meta name='description' content='Découvrez mon portfolio Andy' />
                 <link rel="canonical" href="https://andy23portfolio.netlify.app/" />
             </Helmet>
