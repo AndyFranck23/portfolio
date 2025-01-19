@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './index.css'
 import { HelloWorld, NavComponent } from './components/NavComponent'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'

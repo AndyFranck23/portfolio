@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useState, Component, useEffect } from 'react'
 import image from "../assets/pdp1Prime.png"
 import tailwind from "../assets/tailwind.svg"
 import codeigniter from "../assets/codeigniter.svg"
@@ -9,6 +9,7 @@ import gateau from "../assets/gateau.jpg"
 import ardesign from "../assets/ardesign.jpg"
 import { useNavigate } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
+import AdComponent from './AdComponent'
 
 export const NavComponent = () => {
     useEffect(() => {
@@ -27,13 +28,13 @@ export const NavComponent = () => {
     return (
         <>
             <Helmet>
-                <title>Andy Franck PortFolio</title>
-                <meta name='description' content='Découvrez mon portfolio avec mes projet et mes compétences' />
+                <title>Andy Franck</title>
+                <meta name='description' content="Je m'appel Andy Franck et découvrez mon portfolio avec mes projet et mes compétences" />
                 <link rel="canonical" href="https://andy23portfolio.netlify.app/Home" />
             </Helmet>
             <div className="sm:text-md bg-background bg-auto bg-cover bg-contain">
                 <div className="fixed w-full top-0 left-0 scroll-smooth z-50">
-                    <div className="flex justify-between py-2 px-2 items-center text-md sm:text-lg h-[50px] bg-black/10 backdrop-blur-sm blakdrop-opacity-20 shadow-md animate-nav">
+                    <div className="flex justify-between py-2 px-2 items-center text-md sm:text-lg h-[50px] bg-black/10 backdrop-blur-sm backdrop-opacity-20 shadow-md animate-nav">
                         <h1 href='#' className='font-bold'>Andy F.</h1>
                         <div className="flex justify-between items-center w-[230px]">
                             <button onClick={() => scrollToSection("projet")} >
@@ -86,7 +87,7 @@ export const NavComponent = () => {
                             </div>
                             <Competence />
                         </div>
-                        <div id='contact' className="mt-[50px] font-[600] ">
+                        <div className="mt-[50px] font-[600] ">
                             <div id='contact' className="flex justify-center">
                                 <div className="text-black">
                                     <p className='text-[40px] border-b-4 border-[#0081A7] flex justify-center'>Contact</p>
@@ -96,6 +97,9 @@ export const NavComponent = () => {
                             <Contact />
                         </div>
                     </div>
+                    <ErrorBoundary>
+                        <AdComponent />
+                    </ErrorBoundary>
                     <Footer />
                 </div>
             </div>
@@ -134,7 +138,7 @@ export const ListProjet = () => {
 
 export const Projet = ({ titre, description, image, lien, git, className, children }) => {
     return (
-        <div className="overflow-hidden h-[150px] mb-5 rounded-2xl w-full sm:w-[600px] bg-black/15 backdrop-blur-sm blakdrop-opacity-20 shadow-lg py-2 pr-2 sm:pr-5 flex justify-between">
+        <div className="overflow-hidden h-[150px] mb-5 rounded-2xl w-full sm:w-[600px] bg-black/15 backdrop-blur-sm backdrop-opacity-20 shadow-lg py-2 pr-2 sm:pr-5 flex justify-between">
             <div className="flex items-center">
                 <img src={image} alt="" className={`${className} rounded-[100%] w-[200px] h-[200px] bg-black mr-2 sm:mr-5 -ml-5 sm:w-[220px] sm:h-[250px]`} />
                 <div className="font-normal">
@@ -163,9 +167,9 @@ export const Projet = ({ titre, description, image, lien, git, className, childr
 export const Competence = () => {
     return (
         <div className="sm:flex block justify-around text-white space-y-5 sm:space-y-0">
-            <div className="display-none sm:display-block sm:flex">
-                <div className="display-none sm:display-block sm:space-x-5">
-                    <div className="sm:h-[130px] sm:w-[310px] bg-black/15 backdrop-blur-sm blakdrop-opacity-20 border-2 border-[#0081A7] px-5 py-2 sm:w-[300px] rounded-md mb-5">
+            <div className="hidden sm:block sm:flex">
+                <div className="hidden sm:block sm:space-x-5">
+                    <div className="sm:h-[130px] sm:w-[310px] bg-black/15 backdrop-blur-sm backdrop-opacity-20 border-2 border-[#0081A7] px-5 py-2 sm:w-[300px] rounded-md mb-5">
                         <p className='text-lg font-bold flex justify-center mb-2 sm:mb-2'>Front-end</p>
                         <div className="flex items-center font-[300] justify-around">
                             <div className="space-y-3">
@@ -178,7 +182,7 @@ export const Competence = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="sm:h-[130px] sm:w-[310px]  bg-black/15 backdrop-blur-sm blakdrop-opacity-20 border-2 border-[#0081A7] px-5 py-2 sm:w-[300px] rounded-md mb-5">
+                    <div className="sm:h-[130px] sm:w-[310px]  bg-black/15 backdrop-blur-sm backdrop-opacity-20 border-2 border-[#0081A7] px-5 py-2 sm:w-[300px] rounded-md mb-5">
                         <p className='text-lg font-bold flex justify-center mb-2 sm:mb-2'>Back-end</p>
                         <div className="flex items-center font-[300] justify-around">
                             <div className="space-y-3">
@@ -191,8 +195,8 @@ export const Competence = () => {
                         </div>
                     </div>
                 </div>
-                <div className="display-none sm:display-block sm:space-x-5">
-                    <div className="sm:h-[130px] sm:w-[310px]  bg-black/15 backdrop-blur-sm blakdrop-opacity-20 border-2 border-[#0081A7] px-5 py-2 sm:w-[300px] rounded-md mb-5">
+                <div className="hidden sm:block sm:space-x-5">
+                    <div className="sm:h-[130px] sm:w-[310px]  bg-black/15 backdrop-blur-sm backdrop-opacity-20 border-2 border-[#0081A7] px-5 py-2 sm:w-[300px] rounded-md mb-5">
                         <p className='text-lg font-bold flex justify-center mb-2 sm:mb-2'>Mobile</p>
                         <div className="flex items-center font-[300] justify-around">
                             <div className="space-y-3">
@@ -200,7 +204,7 @@ export const Competence = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="sm:h-[130px] sm:w-[310px] bg-black/15 backdrop-blur-sm blakdrop-opacity-20 border-2 border-[#0081A7] px-5 py-2 sm:w-[300px] rounded-md mb-5">
+                    <div className="sm:h-[130px] sm:w-[310px] bg-black/15 backdrop-blur-sm backdrop-opacity-20 border-2 border-[#0081A7] px-5 py-2 sm:w-[300px] rounded-md mb-5">
                         <p className='text-lg font-bold flex justify-center mb-2 sm:mb-2'>Autres</p>
                         <div className="flex items-center font-[300] justify-around">
                             <div className="space-y-3">
@@ -300,3 +304,28 @@ export const MyButton = ({ click }) => {
         </div>
     )
 }
+
+class ErrorBoundary extends Component {
+    constructor(props) {
+        super(props);
+        this.state = { hasError: false };
+    }
+
+    static getDerivedStateFromError(error) {
+        return { hasError: true };
+    }
+
+    componentDidCatch(error, errorInfo) {
+        console.error('ErrorBoundary a capté une erreur :', error, errorInfo);
+    }
+
+    render() {
+        if (this.state.hasError) {
+            return <h1>Une erreur est survenue. Veuillez réessayer plus tard.</h1>;
+        }
+
+        return this.props.children;
+    }
+}
+
+export default ErrorBoundary;
