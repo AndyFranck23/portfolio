@@ -1,4 +1,4 @@
-import './index.css'
+import './App.css'
 import { HelloWorld, NavComponent } from './components/NavComponent'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 

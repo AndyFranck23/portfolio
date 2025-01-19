@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.7.2",
     "fs": "^0.0.1-security",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
