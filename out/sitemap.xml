@@ -5,10 +5,4 @@
           <loc>https://andy23portfolio.netlify.app/</loc>
           <priority>0.8</priority>
         </url>
-      
-        <url>
-          <loc>https://andy23portfolio.netlify.app/Home</loc>
-          <priority>0.8</priority>
-        </url>
-      
 </urlset>

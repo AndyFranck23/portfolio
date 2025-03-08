@@ -20,7 +20,7 @@ const Container = () => {
 
     return (
         <>
-            <div className="sm:text-md bg-background bg-auto bg-cover bg-contain">
+            <div className="sm:text-md bg-background bg-auto bg-cover bg-contain bg-fixed">
                 <div className="fixed w-full top-0 left-0 scroll-smooth z-50">
                     <div className="flex justify-between py-2 px-2 items-center text-md sm:text-lg h-[50px] bg-black/10 backdrop-blur-sm backdrop-opacity-20 shadow-md animate-nav">
                         <h1 href='#' className='font-bold'>Andy F.</h1>
@@ -40,7 +40,7 @@ const Container = () => {
                 <div className="sm:border-b-2">
                     <div className="sm:flex block justify-between items-center p-5 pt-10">
                         <div className="border-b-4 mb-4 animate-imageProfil">
-                            <img src={"/assets/pdp1Prime.png"} className='right sm:w-[600px] h-[300px]' />
+                            <img src={"/assets/pdp1Prime.png"} className='right sm:w-[400px] sm:h-[500px] h-[300px] object-cover' />
                         </div>
                         <h1 className='text-black animate-textProfil'>
                             Hello world, Je m'appelle <br /><span className='text-2xl font-bold text-[#0081A7] '>Andy Franck</span><br /><p className='text-xl font-[600]'>Développeur FullStack JavaScript</p> <br /> Le develeppement informatique

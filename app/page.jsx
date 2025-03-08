@@ -1,11 +1,12 @@
-import Hello from "@/components/Hello";
+import Container from "@/components/Container"
 
-export default function page() {
+const page = () => {
+
   return (
     <>
-      <div className="">
-        <Hello />
-      </div>
+      <Container />
     </>
   )
 }
+
+export default page
