@@ -47,14 +47,14 @@ const Container = () => {
                             est pour moi l'une de mes patient et je suis pret à realiser tout projet et améliorer mes compétences.
                         </h1><br />
                     </div>
-                    <div className="px-2 animate-body">
+                    <div className="animate-body">
                         <div id='projet' className="sm:flex justify-center items-center">
                             <div className="sm:w-[450px]">
                                 <div className="flex justify-around items-center bg-white py-4 px-1 rounded-2xl">
-                                    <a href='mailto:ironmanandy23@gmail.com' className='border border-[#0081A7] border-2 py-2 px-3 rounded-[15px] hover:bg-[#0081A7] hover:text-white '><i className='fa fa-envelope text-xl'></i>  Contact</a>
+                                    <a href='mailto:andyrakotoarimanitra@gmail.com' className='border border-[#0081A7] border-2 py-2 px-3 rounded-[15px] hover:bg-[#0081A7] hover:text-white '><i className='fa fa-envelope text-xl'></i>  Contact</a>
                                     <a href='https://www.linkedin.com/in/andy-franck-rakotoarimanitra-a368092bb/'
                                         className='border border-[#0081A7] border-2 py-2 px-3 rounded-[15px] hover:bg-[#0081A7] hover:text-white'><i className='fa-brands fa-linkedin text-xl'></i> LinkedIn</a>
-                                    <a href='/CV.pdf' download="andyCV.pdf" className='border border-[#0081A7] border-2 py-2 px-3 rounded-[15px] hover:bg-[#0081A7] hover:text-white'><i className=' animate-bounce fa-solid fa-download text-xl'></i> CV</a>
+                                    <a href='/assets/newCV(2).pdf' download="andyCV.pdf" className='border border-[#0081A7] border-2 py-2 px-3 rounded-[15px] hover:bg-[#0081A7] hover:text-white'><i className=' animate-bounce fa-solid fa-download text-xl'></i> CV</a>
                                 </div>
                             </div>
                         </div>
@@ -85,9 +85,9 @@ const Container = () => {
                             <Contact />
                         </div>
                     </div>
-                    <ErrorBoundary>
+                    {/* <ErrorBoundary>
                         <AdComponent />
-                    </ErrorBoundary>
+                    </ErrorBoundary> */}
                     <Footer />
                 </div>
             </div>
@@ -110,11 +110,10 @@ export const ListProjet = () => {
                     <p className='bg-black/30 px-2 py-0 rounded-2xl'>Bootstrap</p>
                     <p className='bg-black/30 px-2 py-0 rounded-2xl'>css</p>
                 </Projet>
-                <Projet git={"https://github.com/AndyFranck23/cake/tree/master"} className="-ml-[50px] " image={"/assets/gateau.jpg"} titre={"Vente de Pâtisserie"} description={"Un projet qui permet de gérer et automatiser la vente de pâtisseries."} >
-                    <p className='bg-black/30 px-2 py-0 rounded-2xl'>php</p>
-                    <p className='bg-black/30 px-2 py-0 rounded-2xl'>css</p>
-                    <p className='bg-black/30 px-2 py-0 rounded-2xl'>mysql</p>
-                    <p className='bg-black/30 px-2 py-0 rounded-2xl'>JavaScript</p>
+                <Projet lien={"https://www.botia.ai"} git={"https://github.com/AndyFranck23/botia/tree/master"} className="-ml-[50px] " image={"/assets/agentIA.png"} titre={"BotIA"} description={"Un plateforme qui aide à découvrir et comparer les meilleures solutions de chatbots et callbots adaptées aux besoins des clients."} >
+                    <p className='bg-black/30 px-2 py-0 rounded-2xl'>Next.js</p>
+                    <p className='bg-black/30 px-2 py-0 rounded-2xl'>tailwindcss</p>
+                    <p className='bg-black/30 px-2 py-0 rounded-2xl'>mariadb</p>
                 </Projet>
                 <Projet git={"https://github.com/AndyFranck23/ARDesign"} image={"/assets/ardesign.jpg"} titre={"AR Design"} description={"Une application mobile qui fait la vente des meubles intérieur."} >
                     <p className='bg-black/30 px-2 py-0 rounded-2xl'>ReactNative</p>
@@ -130,7 +129,7 @@ export const Projet = ({ titre, description, image, lien, git, className, childr
     return (
         <div className="overflow-hidden h-[150px] mb-5 rounded-2xl w-full sm:w-[600px] bg-black/15 backdrop-blur-sm backdrop-opacity-20 shadow-lg py-2 pr-2 sm:pr-5 flex justify-between">
             <div className="flex items-center">
-                <img src={image} alt="" className={`${className} rounded-[100%] w-[200px] h-[200px] bg-black mr-2 sm:mr-5 -ml-5 sm:w-[220px] sm:h-[250px]`} />
+                <img src={image} alt="" className={`${className} rounded-[100%] w-[200px] h-[200px] bg-black/50 mr-2 sm:mr-5 -ml-5 sm:w-[220px] sm:h-[250px]`} />
                 <div className="font-normal">
                     <p className='font-bold text-white text-lg'>{titre}</p>
                     <p className='text-sm text-white w-[170px] h-[50px] '>{description}</p>
@@ -152,57 +151,238 @@ export const Projet = ({ titre, description, image, lien, git, className, childr
         </div>
     )
 }
-
+{/* <p className='bg-black/30 px-2 py-0 rounded-2xl flex items-center'><i className='fa-brands fa-react text-2xl mr-2'></i> React</p>
+    <p className='bg-black/30 px-2 py-0 rounded-2xl flex items-center'><i className="fa-brands fa-html5 text-2xl mr-2"></i> Html</p>
+    <p className='bg-black/30 px-2 py-0 rounded-2xl flex items-center'><img src={"/assets/tailwind.svg"} className='w-[25px] h-[25px] text-white mr-1' /> tailwindcss</p>
+    <p className='bg-black/30 px-2 py-0 rounded-2xl flex items-center'><i className="fa-brands fa-css3-alt text-2xl mr-2"></i> css</p> */}
 
 export const Competence = () => {
     return (
-        <div className="sm:flex block justify-around text-white space-y-5 sm:space-y-0">
-            <div className="hidden sm:block sm:flex">
-                <div className="hidden sm:block sm:space-x-5">
-                    <div className="sm:h-[130px] sm:w-[310px] bg-black/15 backdrop-blur-sm backdrop-opacity-20 border-2 border-[#0081A7] px-5 py-2 sm:w-[300px] rounded-md mb-5">
-                        <p className='text-lg font-bold flex justify-center mb-2 sm:mb-2'>Front-end</p>
-                        <div className="flex items-center font-[300] justify-around">
-                            <div className="space-y-3">
-                                <p className='bg-black/30 px-2 py-0 rounded-2xl flex items-center'><i className='fa-brands fa-react text-2xl mr-2'></i> React</p>
-                                <p className='bg-black/30 px-2 py-0 rounded-2xl flex items-center'><i className="fa-brands fa-html5 text-2xl mr-2"></i> Html</p>
+        <div className="sm:flex block justify-around text-black space-y-5 sm:space-y-0">
+            <div className="sm:flex">
+                <div className="sm:space-x-5 md:w-[500px]">
+                    <div className="bg-white rounded-lg p-6">
+                        <div className="sm:flex justify-around space-y-5 sm:space-y-0">
+                            <div className="">
+                                {/* Titre de la liste */}
+                                <h3 className="text-lg font-semibold mb-4">Front-end</h3>
+
+                                {/* Conteneur de la liste */}
+                                <div className="relative">
+                                    {/* Ligne verticale */}
+                                    <div className="absolute left-[5px] top-5 w-0.5 h-[calc(100%-2rem)] bg-gray-400" aria-hidden="true"></div>
+
+                                    {/* Éléments de la liste */}
+                                    <div className="space-y-4">
+                                        {/* Item 1 */}
+                                        <div className="relative flex items-center space-x-4">
+                                            {/* Icône + ligne */}
+                                            <div className="relative">
+                                                <div className="flex items-center justify-center w-3 h-3 bg-blue-200 rounded-full">
+                                                </div>
+                                            </div>
+
+                                            {/* Contenu */}
+                                            <div className="flex-1">
+                                                <div className="flex items-center">
+                                                    <i className='fa-brands fa-react text-2xl text-blue-500 mr-2'></i>
+                                                    <p className='py-0 rounded-2xl'> React</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        {/* Item 2 */}
+                                        <div className="relative flex items-center space-x-4">
+                                            <div className="relative">
+                                                <div className="flex items-center justify-center w-3 h-3 bg-blue-200 rounded-full">
+                                                    {/* <FaUser className="w-6 h-6 text-green-600" /> */}
+                                                </div>
+                                            </div>
+
+                                            <div className="flex-1">
+                                                <div className="flex items-center">
+                                                    <i className="fa-brands fa-html5 text-2xl mr-2 text-orange-500"></i>
+                                                    <p className='py-0 rounded-2xl'> Html</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="relative flex items-center space-x-4">
+                                            <div className="relative">
+                                                <div className="flex items-center justify-center w-3 h-3 bg-blue-200 rounded-full">
+                                                    {/* <FaUser className="w-6 h-6 text-green-600" /> */}
+                                                </div>
+                                            </div>
+
+                                            <div className="flex-1">
+                                                <div className="flex items-center">
+                                                    <img src={"/assets/tailwind.png"} className='w-[25px] h-[25px] text-white mr-2' />
+                                                    <p className='py-0 rounded-2xl'> Tailwindcss</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="relative flex items-center space-x-4">
+                                            <div className="relative">
+                                                <div className="flex items-center justify-center w-3 h-3 bg-blue-200 rounded-full">
+                                                    {/* <FaUser className="w-6 h-6 text-green-600" /> */}
+                                                </div>
+                                            </div>
+
+                                            <div className="flex-1">
+                                                <div className="flex items-center">
+                                                    <i className="fa-brands fa-css3-alt text-2xl mr-2 text-blue-500"></i>
+                                                    <p className='py-0 rounded-2xl'> CSS</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {/* Répéter les items suivants... */}
+                                    </div>
+                                </div>
                             </div>
-                            <div className="space-y-3">
-                                <p className='bg-black/30 px-2 py-0 rounded-2xl flex items-center'><img src={"/assets/tailwind.svg"} className='w-[25px] h-[25px] text-white mr-1' /> tailwindcss</p>
-                                <p className='bg-black/30 px-2 py-0 rounded-2xl flex items-center'><i className="fa-brands fa-css3-alt text-2xl mr-2"></i> css</p>
+                            <div className="">
+                                {/* Titre de la liste */}
+                                <h3 className="text-lg font-semibold mb-4">Back-end</h3>
+
+                                {/* Conteneur de la liste */}
+                                <div className="relative">
+                                    {/* Ligne verticale */}
+                                    <div className="absolute left-[5px] top-5 w-0.5 h-[calc(100%-2rem)] bg-gray-400" aria-hidden="true"></div>
+
+                                    {/* Éléments de la liste */}
+                                    <div className="space-y-4">
+                                        {/* Item 1 */}
+                                        <div className="relative flex items-center space-x-4">
+                                            {/* Icône + ligne */}
+                                            <div className="relative">
+                                                <div className="flex items-center justify-center w-3 h-3 bg-blue-200 rounded-full">
+                                                </div>
+                                            </div>
+
+                                            {/* Contenu */}
+                                            <div className="flex-1">
+                                                <div className="flex items-center">
+                                                    <i className="fa-brands fa-node-js text-2xl mr-2 text-green-700"></i>
+                                                    <p className='py-0 rounded-2xl'> Node.js</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        {/* Item 2 */}
+                                        <div className="relative flex items-center space-x-4">
+                                            <div className="relative">
+                                                <div className="flex items-center justify-center w-3 h-3 bg-blue-200 rounded-full">
+                                                    {/* <FaUser className="w-6 h-6 text-green-600" /> */}
+                                                </div>
+                                            </div>
+
+                                            <div className="flex-1">
+                                                <div className="flex items-center">
+                                                    <i className="fa-brands fa-php text-2xl mr-2 text-purple-700"></i>
+                                                    <p className='py-0 rounded-2xl'> PHP</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="relative flex items-center space-x-4">
+                                            <div className="relative">
+                                                <div className="flex items-center justify-center w-3 h-3 bg-blue-200 rounded-full">
+                                                    {/* <FaUser className="w-6 h-6 text-green-600" /> */}
+                                                </div>
+                                            </div>
+
+                                            <div className="flex-1">
+                                                <div className="flex items-center">
+                                                    <img src={"/next.svg"} className='w-[35px] h-[35px] mr-2' />
+                                                    <p className='py-0 rounded-2xl'> Next.js</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {/* Répéter les items suivants... */}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        {/* 2em ligne */}
+                        <div className="sm:flex justify-around pt-5 space-y-5 sm:space-y-0">
+                            <div className="">
+                                {/* Titre de la liste */}
+                                <h3 className="text-lg font-semibold mb-4">Mobile</h3>
+
+                                {/* Conteneur de la liste */}
+                                <div className="relative">
+                                    {/* Ligne verticale */}
+                                    <div className="absolute left-[5px] top-5 w-0.5 h-[calc(100%-2rem)] bg-gray-400" aria-hidden="true"></div>
+
+                                    {/* Éléments de la liste */}
+                                    <div className="space-y-4">
+                                        {/* Item 1 */}
+                                        <div className="relative flex items-center space-x-4">
+                                            {/* Icône + ligne */}
+                                            <div className="relative">
+                                                <div className="flex items-center justify-center w-3 h-3 bg-blue-200 rounded-full">
+                                                </div>
+                                            </div>
+
+                                            {/* Contenu */}
+                                            <div className="flex-1">
+                                                <div className="flex items-center">
+                                                    <i className='fa-brands fa-react text-2xl mr-2 text-blue-500'></i>
+                                                    <p className='py-0 rounded-2xl'> React Native</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="">
+                                {/* Titre de la liste */}
+                                <h3 className="text-lg font-semibold mb-4">Autres</h3>
+
+                                {/* Conteneur de la liste */}
+                                <div className="relative">
+                                    {/* Ligne verticale */}
+                                    <div className="absolute left-[5px] top-5 w-0.5 h-[calc(100%-2rem)] bg-gray-400" aria-hidden="true"></div>
+
+                                    {/* Éléments de la liste */}
+                                    <div className="space-y-4">
+                                        {/* Item 1 */}
+                                        <div className="relative flex items-center space-x-4">
+                                            {/* Icône + ligne */}
+                                            <div className="relative">
+                                                <div className="flex items-center justify-center w-3 h-3 bg-blue-200 rounded-full">
+                                                </div>
+                                            </div>
+
+                                            {/* Contenu */}
+                                            <div className="flex-1">
+                                                <div className="flex items-center">
+                                                    <i className="fa-brands fa-github text-2xl mr-2"></i>
+                                                    <p className='py-0 rounded-2xl'> Git</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        {/* Item 2 */}
+                                        <div className="relative flex items-center space-x-4">
+                                            <div className="relative">
+                                                <div className="flex items-center justify-center w-3 h-3 bg-blue-200 rounded-full">
+                                                    {/* <FaUser className="w-6 h-6 text-green-600" /> */}
+                                                </div>
+                                            </div>
+
+                                            <div className="flex-1">
+                                                <div className="flex items-center">
+                                                    <img src={"/assets/mysql.svg"} className='w-[30px] h-[30px] text-black mr-2' />
+                                                    <p className='py-0 rounded-2xl'> MySQL</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div className="sm:h-[130px] sm:w-[310px]  bg-black/15 backdrop-blur-sm backdrop-opacity-20 border-2 border-[#0081A7] px-5 py-2 sm:w-[300px] rounded-md mb-5">
-                        <p className='text-lg font-bold flex justify-center mb-2 sm:mb-2'>Back-end</p>
-                        <div className="flex items-center font-[300] justify-around">
-                            <div className="space-y-3">
-                                <p className='bg-black/30 px-2 py-0 rounded-2xl flex items-center'><i className="fa-brands fa-node-js text-2xl mr-2"></i> Node.js</p>
-                                <p className='bg-black/30 px-2 py-0 rounded-2xl flex items-center'><i className="fa-brands fa-php text-2xl mr-2"></i> PHP</p>
-                            </div>
-                            <div className="space-y-3">
-                                <p className='bg-black/30 px-2 py-1 rounded-2xl flex items-center'><img src={"/assets/codeigniter.svg"} className='w-[25px] h-[25px] text-white mr-1' /> CodeIgniter</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="hidden sm:block sm:space-x-5">
-                    <div className="sm:h-[130px] sm:w-[310px]  bg-black/15 backdrop-blur-sm backdrop-opacity-20 border-2 border-[#0081A7] px-5 py-2 sm:w-[300px] rounded-md mb-5">
-                        <p className='text-lg font-bold flex justify-center mb-2 sm:mb-2'>Mobile</p>
-                        <div className="flex items-center font-[300] justify-around">
-                            <div className="space-y-3">
-                                <p className='bg-black/30 px-2 py-0 rounded-2xl flex items-center'><i className='fa-brands fa-react text-2xl mr-2'></i> React Native</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="sm:h-[130px] sm:w-[310px] bg-black/15 backdrop-blur-sm backdrop-opacity-20 border-2 border-[#0081A7] px-5 py-2 sm:w-[300px] rounded-md mb-5">
-                        <p className='text-lg font-bold flex justify-center mb-2 sm:mb-2'>Autres</p>
-                        <div className="flex items-center font-[300] justify-around">
-                            <div className="space-y-3">
-                                <p className='bg-black/30 px-2 py-0 rounded-2xl flex items-center'><i className="fa-brands fa-github text-2xl mr-2"></i> Git</p>
-                                <p className='bg-black/30 px-2 py-0 rounded-2xl flex items-center'><img src={"/assets/mysql.svg"} className='w-[30px] h-[30px] text-white mr-2' /> MySQL</p>
-                            </div>
-                        </div>
-                    </div>
+                    {/* <p className='bg-black/30 px-2 py-1 rounded-2xl flex items-center'><img src={"/assets/codeigniter.svg"} className='w-[25px] h-[25px] text-white mr-1' /> CodeIgniter</p> */}
                 </div>
             </div>
         </div>
@@ -211,7 +391,7 @@ export const Competence = () => {
 
 export const Footer = () => {
     return (
-        <footer className="flex justify-center mt-[60px] bg-black py-2 text-white">
+        <footer className="flex justify-center bg-black/50 py-2 text-white">
             <p className='text-center'><span className='font-bold'><i className="fa-regular fa-copyright text-md"></i> Andy Franck |</span> Développeur FullStack JavaScript</p>
         </footer>
     )
@@ -219,16 +399,16 @@ export const Footer = () => {
 
 export const Contact = () => {
     return (
-        <div className="flex justify-center">
-            <div className="w-[300px] sm:w-[400px] space-y-5 ">
-                <div className="flex justify-around items-center">
-                    <a href="mailto:ironmanandy23@gmail.com" className='bg-white border-2 border-[#0081A7] hover:bg-[#0081A7] hover:text-white text-[#0081A7] font-[300] rounded-md py-2 px-4'><i className="fa-solid fa-envelope text-xl"></i> Contactez-moi</a>
-                    <a href="https://www.linkedin.com/in/andy-franck-rakotoarimanitra-a368092bb/" className='bg-white border-2 border-[#0081A7] hover:bg-[#0081A7] hover:text-white text-[#0081A7] font-[300] rounded-md py-2 px-4'><i className='fa-brands fa-linkedin text-xl'></i> Linkedin</a>
-                </div>
-                <div className="flex justify-around items-center">
-                    <a href="https://github.com/AndyFranck23" className='bg-white border-2 border-[#0081A7] hover:bg-[#0081A7] hover:text-white text-[#0081A7] font-[300] rounded-md py-2 px-4'><i className='fa-brands fa-github text-xl'></i> Github</a>
-                    <a href="https://www.facebook.com/andy.rakotoarimanitra" className='bg-white border-2 border-[#0081A7] hover:bg-[#0081A7] hover:text-white text-[#0081A7] font-[300] rounded-md py-2 px-4'><i className="fa-brands fa-facebook text-xl"></i> Facebook</a>
-                </div>
+        <div className="flex justify-center  w-screen p-5">
+            <div className="w-[300px] sm:w-[400px] gap-3 flex flex-wrap justify-around items-center">
+                {/* <div className=""> */}
+                <a href="mailto:andyrakotoarimanitra@gmail.com" className='bg-white border-2 border-[#0081A7] hover:bg-[#0081A7] hover:text-white text-[#0081A7] font-[300] rounded-md py-2 px-4'><i className="fa-solid fa-envelope text-xl"></i> Contactez-moi</a>
+                <a href="https://www.linkedin.com/in/andy-franck-rakotoarimanitra-a368092bb/" className='bg-white border-2 border-[#0081A7] hover:bg-[#0081A7] hover:text-white text-[#0081A7] font-[300] rounded-md py-2 px-4'><i className='fa-brands fa-linkedin text-xl'></i> Linkedin</a>
+                {/* </div>
+                <div className="flex justify-around items-center"> */}
+                <a href="https://github.com/AndyFranck23" className='bg-white border-2 border-[#0081A7] hover:bg-[#0081A7] hover:text-white text-[#0081A7] font-[300] rounded-md py-2 px-4'><i className='fa-brands fa-github text-xl'></i> Github</a>
+                <a href="https://www.facebook.com/andy.rakotoarimanitra" className='bg-white border-2 border-[#0081A7] hover:bg-[#0081A7] hover:text-white text-[#0081A7] font-[300] rounded-md py-2 px-4'><i className="fa-brands fa-facebook text-xl"></i> Facebook</a>
+                {/* </div> */}
             </div>
         </div>
     )
